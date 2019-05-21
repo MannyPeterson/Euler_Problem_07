@@ -8,22 +8,16 @@
 
 public class Main {
 	public static boolean isPrime(long n) {
-		if (n <= 1)
-			return false;
-		if (n > 2 && (n & 1) == 0)
-			return false;
-		for (long i = 3; i <= Math.sqrt(n); i += 2)
-			if (n % i == 0)
-				return false;
+		if (n <= 1)	return false;
+		if (n > 2 && (n & 1) == 0) return false;
+		for (long i = 3; i <= Math.sqrt(n); i += 2)	if (n % i == 0)	return false;
 		return true;
 	}
-
 	public static void main(String[] args) {
-		long n = 0, p = 0;
+		long n = 1, p = 1;
 		do {
-			n += 1;
-			if (Main.isPrime(n))
-				p += 1;
+			n += 2;
+			if (Main.isPrime(n)) p += 1;
 		} while (p < 10001);
 		System.out.format("ANSWER = %d\n", n);
 	}

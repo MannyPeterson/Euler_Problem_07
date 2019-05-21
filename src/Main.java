@@ -8,9 +8,9 @@
 
 public class Main {
 	public static boolean isPrime(long n) {
-		if (n <= 1)	return false;
+		if (n <= 1) return false;
 		if (n > 2 && (n & 1) == 0) return false;
-		for (long i = 3; i <= Math.sqrt(n); i += 2)	if (n % i == 0)	return false;
+		for (long i = 3; i <= Math.sqrt(n); i += 2) if (n % i == 0) return false;
 		return true;
 	}
 	public static void main(String[] args) {
